@@ -29,7 +29,9 @@ const Navbar = () => {
       <div className="flex flex-row gap-6">
         <img onClick={() => setShowSearch(true)} src={assets.search_icon} className="w-6 cursor-pointer" alt="" />
         <div className="group relative">
-          <img className="w-6 cursor-pointer" src={assets.profile_icon} alt="" />
+          <Link to={"/login"}>
+            <img className="w-6 cursor-pointer" src={assets.profile_icon} alt="" />
+          </Link>
           <div className="hidden group-hover:block absolute right-0">
             <div className="bg-slate-100 py-3 px-5 rounded">
               <p>My Profile</p>
