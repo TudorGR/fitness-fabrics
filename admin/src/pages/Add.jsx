@@ -113,19 +113,19 @@ const Add = ({ token }) => {
         <p className="mb-2">Product Sizes</p>
         <div className="flex gap-3">
           <div onClick={() => setSizes((prev) => (prev.includes("S") ? prev.filter((item) => item !== "S") : [...prev, "S"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("S") ? "bg-blue-400" : ""}`}>S</p>
+            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("S") ? "bg-blue-800" : ""}`}>S</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("M") ? prev.filter((item) => item !== "M") : [...prev, "M"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("M") ? "bg-blue-400" : ""}`}>M</p>
+            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("M") ? "bg-blue-800" : ""}`}>M</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("L") ? prev.filter((item) => item !== "L") : [...prev, "L"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("L") ? "bg-blue-400" : ""}`}>L</p>
+            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("L") ? "bg-blue-800" : ""}`}>L</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("XL") ? prev.filter((item) => item !== "XL") : [...prev, "XL"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("XL") ? "bg-blue-400" : ""}`}>XL</p>
+            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("XL") ? "bg-blue-800" : ""}`}>XL</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("XXL") ? prev.filter((item) => item !== "XXL") : [...prev, "XXL"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("XXL") ? "bg-blue-400" : ""}`}>XXL</p>
+            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("XXL") ? "bg-blue-800" : ""}`}>XXL</p>
           </div>
         </div>
       </div>
