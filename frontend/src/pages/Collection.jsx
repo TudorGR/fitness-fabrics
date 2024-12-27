@@ -11,6 +11,7 @@ const Collection = () => {
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState("Relevant");
+  const [price, setPrice] = useState([0, 1000]);
 
   const selectCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -38,8 +39,15 @@ const Collection = () => {
       productsCopy = productsCopy.filter((item) => category.includes(item.category));
     }
     if (subCategory.length > 0) {
+      //not currently working
       productsCopy = productsCopy.filter((item) => subCategory.includes(item.subCategory));
     }
+    setFilterProducts(productsCopy);
+  };
+
+  const applyFilterPrice = () => {
+    let productsCopy = products.slice();
+    productsCopy = productsCopy.filter((item) => item.price > price[0] && item.price < price[1]);
     setFilterProducts(productsCopy);
   };
 
@@ -66,14 +74,31 @@ const Collection = () => {
     sortProduct();
   }, [sortType]);
 
+  useEffect(() => {
+    applyFilterPrice();
+  }, [price]);
+
   return (
-    <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t">
+    <div className="m-10 flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10">
       <div className="min-w-60">
         <p onClick={() => setShowFilter(!showFilter)} className="my-2 text-xl flex items-center cursor-pointer gap-2">
           Filters
           <img src={assets.cart_icon} className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`} alt="" />
         </p>
-        <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? "" : "hidden"} sm:block`}>
+        <div className="price-filter p-4 pb-10 border-b-gray-300 border border-white">
+          <label className="block mb-2 text-sm font-medium text-gray-700">Price:</label>
+          <div className="flex items-center gap-2">
+            <p>min:</p>
+            <input type="range" min="0" max="1000" value={price[0]} onChange={(e) => setPrice([parseInt(e.target.value), price[1]])} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
+            <span className="text-sm font-medium text-gray-700">${price[0]}</span>
+          </div>
+          <div className="flex items-center gap-2 mt-2">
+            <p>max:</p>
+            <input type="range" min="0" max="1000" value={price[1]} onChange={(e) => setPrice([price[0], parseInt(e.target.value)])} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
+            <span className="text-sm font-medium text-gray-700">${price[1]}</span>
+          </div>
+        </div>
+        <div className={`border border-white border-b-gray-300 pl-5 py-4 pb-10 my-6 ${showFilter ? "" : "hidden"} sm:block`}>
           <p className="mb-3 text-sm font-medium">Categories</p>
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
             <p className="flex gap-2">
@@ -90,7 +115,7 @@ const Collection = () => {
             </p>
           </div>
         </div>
-        <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? "" : "hidden"} sm:block`}>
+        <div className={` pl-5 py-3 my-5 ${showFilter ? "" : "hidden"} sm:block`}>
           <p className="mb-3 text-sm font-medium">Type</p>
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
             <p className="flex gap-2">
@@ -109,9 +134,9 @@ const Collection = () => {
         </div>
       </div>
       <div className="flex-1">
-        <div className="flex justify-between text-base sm:text-2xl mb-4">
+        <div className="flex justify-between text-base sm:text-2xl mb-4 font-medium">
           <Title text1={"All"} text2={"Collections"} />
-          <select onChange={(e) => setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2">
+          <select onChange={(e) => setSortType(e.target.value)} className=" text-sm px-2">
             '<option value="relevant">Sort by relevant</option>
             <option value="low-high">Sort by low to high</option>
             <option value="high-low">Sort by high to low</option>

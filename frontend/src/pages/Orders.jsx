@@ -39,19 +39,19 @@ const Orders = () => {
   }, [token]);
 
   return (
-    <div className="border-t pt-16">
-      <div className="text-2xl">
+    <div className="border-t pt-16 px-4 sm:px-8 lg:px-16">
+      <div className="text-2xl mb-8">
         <Title text1={"My"} text2={"Orders"} />
       </div>
-      <div>
+      <div className="space-y-6">
         {orderData.map((item, index) => (
-          <div key={index} className="py-4 border-t border-b text-gray-700 flex flex-col gap-4">
+          <div key={index} className="py-4  border-b text-gray-700 flex flex-row gap-4 justify-between bg-white  p-4">
             <div className="flex items-start gap-6 text-sm">
-              <img src={item.image} className="w-16 sm:w-20" alt="" />
+              <img src={item.image} className="w-16 sm:w-20 rounded-md" alt="" />
               <div>
                 <p className="sm:text-base font-medium">{item.name}</p>
-                <div className="flex items-center gap-3 mt-2 text-base ">
-                  <p className="text-lg">
+                <div className="flex items-center gap-3 mt-2 text-base">
+                  <p className="text-lg font-semibold">
                     {currency}
                     {item.price}
                   </p>
@@ -66,12 +66,12 @@ const Orders = () => {
                 </p>
               </div>
             </div>
-            <div className="md:w-1/2 flex justify-between">
+            <div className="md:w-1/2 flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <p className="min-w-2 h-2 rounded-full bg-green-400"></p>
                 <p className="text-sm md:text-base">{item.status}</p>
               </div>
-              <button onClick={fetchOrderData} className="border px-4 py-2 text-sm font-medium">
+              <button onClick={fetchOrderData} className="border px-4 py-2 text-sm font-medium rounded-md bg-black text-white hover:bg-gray-700">
                 Track Order
               </button>
             </div>

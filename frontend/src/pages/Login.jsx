@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Login");
@@ -43,27 +43,35 @@ const Login = () => {
   }, [token]);
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center w-[40%] m-auto mt-14 gap-4">
-      <div className="inline-flex items-center gap-2 mb-2 mt-10">
+    <form onSubmit={handleSubmit} className="flex flex-col items-center w-[50%] md:w-[400px] m-auto my-24 gap-4">
+      <div className="flex w-full justify-between ">
+        <p className={`transition-all duration-150 ${currentState !== "Login" ? "border-b-black text-black" : "border-b-gray-300 text-gray-300"} border border-white py-2 flex-1 text-center font-semibold cursor-pointer`} onClick={() => setCurrentState("Sign Up")}>
+          Sign Up
+        </p>
+        <p className={`transition-all duration-150 ${currentState === "Login" ? "border-b-black text-black" : "border-b-gray-300 text-gray-300"} border border-white   py-2 flex-1 text-center font-semibold cursor-pointer`} onClick={() => setCurrentState("Login")}>
+          Sign In
+        </p>
+      </div>
+      <div className="inline-flex items-center gap-2 mb-2 ">
         <p className="text-3xl">{currentState}</p>
         <hr className="border-none h-[1.5px] w-8 bg-slate-300" />
       </div>
-      {currentState === "Sign Up" ? <input onChange={(e) => setName(e.target.value)} value={name} type="text" className="w-full px-3 py-2 border border-gray-800" placeholder="Name" required /> : ""}
-      <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className="w-full px-3 py-2 border border-gray-800" placeholder="Email" required />
-      <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" className="w-full px-3 py-2 border border-gray-800" placeholder="Password" required />
+      {currentState === "Sign Up" ? <input onChange={(e) => setName(e.target.value)} value={name} type="text" className=" font-medium w-full px-3 py-2 border border-black rounded-sm" placeholder="Name" required /> : ""}
+      <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className=" font-medium w-full px-3 py-2 border border-black rounded-sm" placeholder="Email" required />
+      <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" className=" font-medium w-full px-3 py-2 border border-black rounded-sm" placeholder="Password" required />
+      {currentState === "Sign Up" && (
+        <div className="flex items-start gap-2">
+          <input type="checkbox" />
+          <label htmlFor="newsletter" className="text-xs">
+            I would like to receive newsletters from FITNESS FABRICS about current trends, offers and vouchers in accordance with the Privacy Policy.
+          </label>
+        </div>
+      )}
       <div className="w-full flex justify-between text-sm mt-[-8px]">
         <p className="cursor-pointer">Forgot your password?</p>
-        {currentState === "Login" ? (
-          <p className="cursor-pointer" onClick={() => setCurrentState("Sign Up")}>
-            Create Account
-          </p>
-        ) : (
-          <p className="cursor-pointer" onClick={() => setCurrentState("Login")}>
-            Login
-          </p>
-        )}
       </div>
       <button className="bg-black text-white py-3 px-10">{currentState === "Login" ? "Sign In" : "Sign Up"}</button>
+      <ToastContainer />
     </form>
   );
 };

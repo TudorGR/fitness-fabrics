@@ -1,30 +1,32 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
-import { useLocation } from "react-router";
 
 function SearchBar() {
-  const { search, setSearch, showSearch, setShowSearch } = useContext(ShopContext);
-  const [visible, setVisible] = useState(false);
-  const location = useLocation();
+  const { search, setSearch, showSearch, setShowSearch, navigate } = useContext(ShopContext);
 
-  useEffect(() => {
-    if (location.pathname.includes("collection")) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  }, [location]);
-
-  return showSearch && visible ? (
-    <div className="border-t border-b bg-gray-50 text-center py-3">
-      <div className="inline-flex items-center justify-center border p-3 border-gray-400 rounded-full w-3/4">
-        <input value={search} onChange={(e) => setSearch(e.target.value)} className="flex-1 outline-none bg-inherit text-sm" type="text" placeholder="Search" />
-        <img src={assets.cart_icon} className="w-4" alt="" />
+  return (
+    <div className={`transition-all duration-300 ease-in-out ${showSearch ? "max-h-40 opacity-100" : "max-h-0 opacity-0"} overflow-hidden`}>
+      <div className="border-t border-b white text-center py-3">
+        <div className="bg-neutral-100 inline-flex items-center justify-center  p-3 rounded-lg w-2/4">
+          <input
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                navigate("/collection");
+              }
+            }}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="font-medium px-4 flex-1 outline-none bg-inherit text-md"
+            type="text"
+            placeholder="Search"
+          />
+          <img src={assets.search_icon} className="w-4" alt="" />
+        </div>
+        <img onClick={() => setShowSearch(false)} src={assets.cross} className="mx-4 inline w-3 cursor-pointer" alt="" />
       </div>
-      <img onClick={() => setShowSearch(false)} src={assets.cart_icon} className="inline w-3 cursor-pointer" alt="" />
     </div>
-  ) : null;
+  );
 }
 
 export default SearchBar;

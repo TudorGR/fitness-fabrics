@@ -8,3 +8,14 @@
     color: white;
   }
 }
+.activeUnderline .active,
+.activeUnderline .active p {
+  border-bottom: 1px solid black;
+  color: black;
+}
+.boxShadow {
+  box-shadow: rgba(100, 100, 111, 0.15) 0px 0px 30px 0px;
+}
+.fatface {
+  font-family: "Abril Fatface", serif;
+}

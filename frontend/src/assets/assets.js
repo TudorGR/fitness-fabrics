@@ -1,29 +1,42 @@
-import logo from "./image.jpg";
+import logo from "./image.png";
 import hero_img from "./hero.jpg";
 import cart_icon from "./cart.png";
 import search_icon from "./searchIcon.png";
 import profile_icon from "./profileIcon.png";
 import menu_icon from "./menuIcon.png";
-import pImg1 from "./image.jpg";
-import pImg2 from "./image.jpg";
-import pImg3 from "./image.jpg";
-import pImg4 from "./image.jpg";
-import pImg5 from "./image.jpg";
-import pImg6 from "./image.jpg";
-import pImg7 from "./image.jpg";
-import pImg8 from "./image.jpg";
-import pImg9 from "./image.jpg";
-import pImg10 from "./image.jpg";
-import pImg11 from "./image.jpg";
-import pImg12 from "./image.jpg";
-import pImg13 from "./image.jpg";
-import pImg14 from "./image.jpg";
-import pImg15 from "./image.jpg";
-import pImg16 from "./image.jpg";
-import pImg17 from "./image.jpg";
-import pImg18 from "./image.jpg";
-import pImg19 from "./image.jpg";
-import pImg20 from "./image.jpg";
+import track_order from "./trackOrder.png";
+import facebook from "./facebook.png";
+import linkedin from "./linkedin.png";
+import X from "./X.png";
+import instagram from "./instagram.png";
+import about1 from "./about1.jpg";
+import offer from "./offer.png";
+import pImg1 from "./image.png";
+import pImg2 from "./image.png";
+import pImg3 from "./image.png";
+import pImg4 from "./image.png";
+import pImg5 from "./image.png";
+import pImg6 from "./image.png";
+import pImg7 from "./image.png";
+import pImg8 from "./image.png";
+import pImg9 from "./image.png";
+import pImg10 from "./image.png";
+import pImg11 from "./image.png";
+import pImg12 from "./image.png";
+import pImg13 from "./image.png";
+import pImg14 from "./image.png";
+import pImg15 from "./image.png";
+import pImg16 from "./image.png";
+import pImg17 from "./image.png";
+import pImg18 from "./image.png";
+import pImg19 from "./image.png";
+import pImg20 from "./image.png";
+import checkmark from "./checkmark.png";
+import recycle from "./recycle.jpg";
+import star from "./star.png";
+import cross from "./cross.png";
+import card from "./card.jpg";
+import cash from "./cash.png";
 
 export const assets = {
   logo,
@@ -32,247 +45,17 @@ export const assets = {
   search_icon,
   profile_icon,
   menu_icon,
+  track_order,
+  offer,
+  instagram,
+  facebook,
+  linkedin,
+  X,
+  about1,
+  checkmark,
+  recycle,
+  star,
+  cross,
+  card,
+  cash,
 };
-
-export const products = [
-  {
-    _id: "aaaa",
-    name: "Women Round Neck Cotton Top",
-    description: "A lightweight pullover",
-    price: 100,
-    image: [pImg1],
-    category: "Women",
-    subCategory: "Topwear",
-    sizes: ["S", "M", "L"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "bbbb",
-    name: "Men's Denim Jacket",
-    description: "Classic blue denim jacket",
-    price: 150,
-    image: [pImg2],
-    category: "Men",
-    subCategory: "Winterwear",
-    sizes: ["M", "L", "XL"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "cccc",
-    name: "Kids Printed T-Shirt",
-    description: "Soft cotton t-shirt with playful prints",
-    price: 50,
-    image: [pImg3],
-    category: "Kids",
-    subCategory: "Topwear",
-    sizes: ["XS", "S", "M"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "dddd",
-    name: "Women's Maxi Dress",
-    description: "Elegant floral maxi dress",
-    price: 200,
-    image: [pImg4],
-    category: "Women",
-    subCategory: "Topwear",
-    sizes: ["S", "M", "L", "XL"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "eeee",
-    name: "Men's Leather Belt",
-    description: "Premium quality leather belt",
-    price: 80,
-    image: [pImg5],
-    category: "Men",
-    subCategory: "Bottomwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "ffff",
-    name: "Kids Sneakers",
-    description: "Comfortable and stylish sneakers",
-    price: 120,
-    image: [pImg6],
-    category: "Kids",
-    subCategory: "Bottomwear",
-    sizes: ["28", "30", "32", "34"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "gggg",
-    name: "Women's Handbag",
-    description: "Spacious and elegant handbag",
-    price: 250,
-    image: [pImg7],
-    category: "Women",
-    subCategory: "Bottomwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "hhhh",
-    name: "Men's Casual Shirt",
-    description: "Lightweight and breathable fabric",
-    price: 90,
-    image: [pImg8],
-    category: "Men",
-    subCategory: "Topwear",
-    sizes: ["M", "L", "XL", "XXL"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "iiii",
-    name: "Kids Pajama Set",
-    description: "Soft and cozy cotton pajama set",
-    price: 70,
-    image: [pImg9],
-    category: "Kids",
-    subCategory: "Bottomwear",
-    sizes: ["XS", "S", "M", "L"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "jjjj",
-    name: "Women's Running Shoes",
-    description: "Comfortable and durable running shoes",
-    price: 180,
-    image: [pImg10],
-    category: "Women",
-    subCategory: "Bottomwear",
-    sizes: ["5", "6", "7", "8"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "kkkk",
-    name: "Men's Wallet",
-    description: "Compact and durable leather wallet",
-    price: 60,
-    image: [pImg11],
-    category: "Men",
-    subCategory: "Bottomwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "llll",
-    name: "Kids Raincoat",
-    description: "Waterproof and lightweight raincoat",
-    price: 85,
-    image: [pImg12],
-    category: "Kids",
-    subCategory: "Winterwear",
-    sizes: ["XS", "S", "M", "L"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "mmmm",
-    name: "Women's Scarf",
-    description: "Soft and stylish scarf",
-    price: 40,
-    image: [pImg13],
-    category: "Women",
-    subCategory: "Winterwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "nnnn",
-    name: "Men's Sports Shoes",
-    description: "Durable and comfortable sports shoes",
-    price: 170,
-    image: [pImg14],
-    category: "Men",
-    subCategory: "Bottomwear",
-    sizes: ["7", "8", "9", "10"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "oooo",
-    name: "Kids Backpack",
-    description: "Spacious and durable backpack",
-    price: 90,
-    image: [pImg15],
-    category: "Kids",
-    subCategory: "Bottomwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "pppp",
-    name: "Women's Summer Hat",
-    description: "Stylish and breathable hat",
-    price: 50,
-    image: [pImg16],
-    category: "Women",
-    subCategory: "Winterwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "qqqq",
-    name: "Men's Formal Shirt",
-    description: "Elegant and comfortable formal shirt",
-    price: 120,
-    image: [pImg17],
-    category: "Men",
-    subCategory: "Topwear",
-    sizes: ["M", "L", "XL"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "rrrr",
-    name: "Kids Sports Shorts",
-    description: "Comfortable and lightweight shorts",
-    price: 60,
-    image: [pImg18],
-    category: "Kids",
-    subCategory: "Bottomwear",
-    sizes: ["XS", "S", "M", "L"],
-    date: 1716634345448,
-    bestseller: true,
-  },
-  {
-    _id: "ssss",
-    name: "Women's Sunglasses",
-    description: "Trendy and protective sunglasses",
-    price: 110,
-    image: [pImg19],
-    category: "Women",
-    subCategory: "Bottomwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-  {
-    _id: "tttt",
-    name: "Men's Beanie Hat",
-    description: "Warm and cozy beanie",
-    price: 30,
-    image: [pImg20],
-    category: "Men",
-    subCategory: "Winterwear",
-    sizes: ["One Size"],
-    date: 1716634345448,
-    bestseller: false,
-  },
-];
