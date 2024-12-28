@@ -34,6 +34,7 @@ const Cart = () => {
       <div className="grid gap-6">
         {cartData.map((item, index) => {
           const productData = products.find((product) => product._id === item._id);
+          if (!productData) return null; // Add this check to avoid undefined productData
           return (
             <div className="flex justify-between py-4 border-t border-b text-gray-700 sm:grid grid-cols-1 sm:grid-cols-[4fr_1fr_1fr] md:grid-cols-[4fr_2fr_1fr] items-center gap-4" key={index}>
               <div className="flex items-start gap-6">
