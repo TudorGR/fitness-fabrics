@@ -43,7 +43,7 @@ const Login = () => {
   }, [token]);
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center w-[50%] md:w-[400px] m-auto my-24 gap-4">
+    <form onSubmit={handleSubmit} className="flex flex-col items-center w-[70%] sm:w-[55%] md:w-[400px] m-auto my-24 gap-4">
       <div className="flex w-full justify-between ">
         <p className={`transition-all duration-150 ${currentState !== "Login" ? "border-b-black text-black" : "border-b-gray-300 text-gray-300"} border border-white py-2 flex-1 text-center font-semibold cursor-pointer`} onClick={() => setCurrentState("Sign Up")}>
           Sign Up
@@ -67,10 +67,12 @@ const Login = () => {
           </label>
         </div>
       )}
-      <div className="w-full flex justify-between text-sm mt-[-8px]">
-        <p className="cursor-pointer">Forgot your password?</p>
-      </div>
-      <button className="bg-black text-white py-3 px-10">{currentState === "Login" ? "Sign In" : "Sign Up"}</button>
+      {currentState === "Login" ? (
+        <div className="w-full flex justify-between text-sm mt-[-8px]">
+          <p className="cursor-pointer text-gray-300">Forgot your password?</p>
+        </div>
+      ) : null}
+      <button className="rounded-sm bg-black text-white py-3 px-10">{currentState === "Login" ? "Sign In" : "Sign Up"}</button>
       <ToastContainer />
     </form>
   );

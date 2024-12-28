@@ -66,7 +66,7 @@ const Navbar = () => {
               <img draggable="false" className="w-6 cursor-pointer" src={assets.profile_icon} alt="" />
 
               {token ? (
-                <div className="z-10 rounded-sm boxShadow w-[200px] hidden group-hover:block absolute right-0">
+                <div className="z-10 rounded-md boxShadow w-[200px] hidden group-hover:block absolute right-0">
                   <div className="bg-white flex flex-col items-start rounded">
                     <p className="hover:font-bold p-4">Profile</p>
                     <p className="hover:font-bold px-4 cursor-pointer" onClick={() => navigate("/orders")}>
@@ -79,21 +79,21 @@ const Navbar = () => {
                   </div>
                 </div>
               ) : (
-                <div className="z-10 rounded-sm boxShadow w-[400px] hidden group-hover:block absolute  right-0">
+                <div className="z-10 rounded-md boxShadow w-[300px] sm:w-[400px] hidden group-hover:block absolute  right-0">
                   <div className="bg-white flex flex-col items-center rounded">
-                    <p className="text-lg font-bold py-4">You are not logged in</p>
+                    <p className="text-base md:text-lg font-bold py-4">You are not logged in</p>
                     <button className="rounded-md bg-black text-white w-[90%] py-3 font-medium" onClick={() => navigate("/login")}>
                       Login
                     </button>
                     <hr className="border-b-black w-full mt-4" />
-                    <div className="flex gap-6">
+                    <div className="flex gap-2 sm:gap-6">
                       <div className="flex items-center gap-2">
                         <img src={assets.offer} className="w-8" />
-                        <p className="font-semibold py-4">Exclusive Offers</p>
+                        <p className="text-sm sm:text-base font-semibold py-4">Exclusive Offers</p>
                       </div>
                       <div className="flex items-center gap-2">
                         <img src={assets.track_order} className="w-8" />
-                        <p className="font-semibold py-4">Track Orders</p>
+                        <p className="text-sm sm:text-base font-semibold py-4">Track Orders</p>
                       </div>
                     </div>
                   </div>

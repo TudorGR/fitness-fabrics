@@ -85,7 +85,7 @@ const Collection = () => {
           Filters
           <img src={assets.arrow} className={`h-3 sm:hidden rotate-90 ${showFilter ? "rotate-[-90]" : ""}`} alt="" />
         </p>
-        <div className="pr-0 p-4 pb-10 mb-10 border-b-gray-300 border border-white">
+        <div className={`${showFilter ? "" : "hidden"} sm:block pr-0 p-4 pb-10 mb-10 border-b-gray-300 border border-white`}>
           <label className="block mb-2 text-sm font-medium text-gray-700">Price:</label>
           <div className="flex items-center gap-2">
             <p>min</p>
@@ -142,7 +142,7 @@ const Collection = () => {
         </div>
       </div>
       <div className="flex-1">
-        <div className="flex justify-between text-base sm:text-2xl mb-4 font-medium">
+        <div className="flex justify-between text-base sm:text-2xl mb-10 font-medium">
           <div className="flex items-center gap-2">
             <p onClick={() => navigate("/collection")} className="text-neutral-700 font-semibold text-sm md:text-base">
               All Collection

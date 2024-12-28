@@ -17,7 +17,7 @@ function SearchBar() {
             }}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="font-medium px-4 flex-1 outline-none bg-inherit text-md"
+            className="font-medium px-4 flex-1 outline-none bg-inherit text-xs sm:text-base"
             type="text"
             placeholder="Search"
           />
