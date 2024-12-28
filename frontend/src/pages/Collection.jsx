@@ -79,21 +79,21 @@ const Collection = () => {
   }, [price]);
 
   return (
-    <div className="m-10 flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10">
-      <div className="min-w-60">
+    <div className="m-10 flex flex-col sm:flex-row gap-1 sm:gap-10">
+      <div className="min-w-40 md:min-w-60">
         <p onClick={() => setShowFilter(!showFilter)} className="my-2 text-xl flex items-center cursor-pointer gap-2">
           Filters
-          <img src={assets.cart_icon} className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`} alt="" />
+          <img src={assets.arrow} className={`h-3 sm:hidden rotate-90 ${showFilter ? "rotate-[-90]" : ""}`} alt="" />
         </p>
-        <div className="price-filter p-4 pb-10 border-b-gray-300 border border-white">
+        <div className="pr-0 p-4 pb-10 border-b-gray-300 border border-white">
           <label className="block mb-2 text-sm font-medium text-gray-700">Price:</label>
           <div className="flex items-center gap-2">
-            <p>min:</p>
+            <p>min</p>
             <input type="range" min="0" max="1000" value={price[0]} onChange={(e) => setPrice([parseInt(e.target.value), price[1]])} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
             <span className="text-sm font-medium text-gray-700">${price[0]}</span>
           </div>
           <div className="flex items-center gap-2 mt-2">
-            <p>max:</p>
+            <p>max</p>
             <input type="range" min="0" max="1000" value={price[1]} onChange={(e) => setPrice([price[0], parseInt(e.target.value)])} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" />
             <span className="text-sm font-medium text-gray-700">${price[1]}</span>
           </div>
@@ -120,15 +120,23 @@ const Collection = () => {
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
             <p className="flex gap-2">
               <input onChange={selectSubCategory} type="checkbox" className="w-3" value={"Topwear"} />
-              Topwear
+              Shorts
             </p>
             <p className="flex gap-2">
               <input onChange={selectSubCategory} type="checkbox" className="w-3" value={"Bottomwear"} />
-              Bottomwear
+              T-Shirts & Tops
             </p>
             <p className="flex gap-2">
               <input onChange={selectSubCategory} type="checkbox" className="w-3" value={"Winterwear"} />
-              Winterwear
+              Tank Tops
+            </p>
+            <p className="flex gap-2">
+              <input onChange={selectSubCategory} type="checkbox" className="w-3" value={"Winterwear"} />
+              Crop Tops
+            </p>
+            <p className="flex gap-2">
+              <input onChange={selectSubCategory} type="checkbox" className="w-3" value={"Winterwear"} />
+              Leggins
             </p>
           </div>
         </div>
@@ -144,7 +152,7 @@ const Collection = () => {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
           {filterProducts.map((item, index) => (
-            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
+            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} sizes={item.sizes} />
           ))}
         </div>
       </div>

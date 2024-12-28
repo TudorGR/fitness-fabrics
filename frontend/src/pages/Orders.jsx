@@ -51,7 +51,7 @@ const Orders = () => {
               <div>
                 <p className="sm:text-base font-medium">{item.name}</p>
                 <div className="flex items-center gap-3 mt-2 text-base">
-                  <p className="text-lg font-semibold">
+                  <p className="text-sm sm:text-base md:text-lg font-semibold">
                     {currency}
                     {item.price}
                   </p>
@@ -66,14 +66,14 @@ const Orders = () => {
                 </p>
               </div>
             </div>
-            <div className="md:w-1/2 flex justify-between items-center">
+            <div className="sm:w-1/2 flex flex-col md:flex-row justify-around items-center">
+              <button onClick={fetchOrderData} className="text-nowrap border px-4 py-2 text-sm font-medium rounded-md bg-black text-white hover:bg-gray-700">
+                Track Order
+              </button>
               <div className="flex items-center gap-2">
                 <p className="min-w-2 h-2 rounded-full bg-green-400"></p>
                 <p className="text-sm md:text-base">{item.status}</p>
               </div>
-              <button onClick={fetchOrderData} className="border px-4 py-2 text-sm font-medium rounded-md bg-black text-white hover:bg-gray-700">
-                Track Order
-              </button>
             </div>
           </div>
         ))}

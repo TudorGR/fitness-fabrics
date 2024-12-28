@@ -16,7 +16,6 @@ const Product = () => {
       if (item._id === productId) {
         setProductData(item);
         setImage(item.image[0]);
-        console.log(item);
 
         return null;
       }
@@ -28,23 +27,23 @@ const Product = () => {
   }, [productId, products]);
 
   return productData ? (
-    <div className=" transition-opacity ease-in duration-500 opacity-100">
+    <div className="mx-10 transition-opacity ease-in duration-500 opacity-100">
       <div className="py-4 px-10 font-medium">{`Collection ${productData.category ? "> " + productData.category : ""}`}</div>
       <div className="flex gap-12 sm:gap-12 flex-col sm:flex-row">
-        <div className="flex flex-1 flex-col gap-4 w-1/2 items-center">
-          <div className="max-w-[500px]">
-            <img src={image} className="rounded-lg object-cover aspect-square w-full h-auto" />
+        <div className="w-full flex flex-1 sm:flex-col flex-row gap-4 sm:w-1/2 items-center">
+          <div className="max-w-[500px] w-full">
+            <img src={image} className="rounded-lg object-cover w-full h-auto" />
           </div>
-          <div className="flex flex-row overflow-x-auto sm:overflow-y-auto justify-center w-full gap-2 overflow-scroll">
+          <div className="flex flex-col sm:flex-row overflow-x-auto sm:overflow-y-auto justify-center w-1/3 sm:w-full gap-2">
             {productData.image.map((item, index) => (
-              <img onClick={() => setImage(item)} src={item} key={index} className=" w-[80px] aspect-square object-cover rounded-lg sm:3 flex-shrink-0 cursor-pointer" />
+              <img onClick={() => setImage(item)} src={item} key={index} className="w-[80px] h-[80px] object-cover rounded-lg cursor-pointer" />
             ))}
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex justify-between items-center">
-            <h1 className="font-medium text-3xl mt-2">{productData.name}</h1>
+          <div className="flex flex-col lg:flex-row-reverse  justify-between">
             <p className="font-thin text-sm text-gray-500 mr-10">{productId}</p>
+            <h1 className="font-medium text-3xl mt-2">{productData.name}</h1>
           </div>
           <div className="flex items-center gap-1 mt-2">
             <img src={assets.star} alt="" className="w-3 5" />
@@ -86,7 +85,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <div className="mx-10  mt-20">
+      <div className=" mt-20">
         <div className="flex">
           <b className="border border-white border-r-gray-300 px-5 py-3 text-sm">Description</b>
           <p className="px-5 py-3 text-sm">Reviews (31)</p>

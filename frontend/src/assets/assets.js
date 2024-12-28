@@ -37,6 +37,9 @@ import star from "./star.png";
 import cross from "./cross.png";
 import card from "./card.jpg";
 import cash from "./cash.png";
+import exchange from "./exchange.png";
+import returnIcon from "./return.png";
+import arrow from "./arrow.png";
 
 export const assets = {
   logo,
@@ -58,4 +61,7 @@ export const assets = {
   cross,
   card,
   cash,
+  exchange,
+  returnIcon,
+  arrow,
 };

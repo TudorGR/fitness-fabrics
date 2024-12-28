@@ -23,12 +23,12 @@ const Hero = () => {
       <div className="flex justify-around my-4">
         <div className="flex flex-1 items-center gap-4 justify-center">
           <img src={assets.checkmark} className="w-4" />
-          <p>Ethically Made in Certified Factories</p>
+          <p className="text-xs sm:text-sm md:text-base">Ethically Made in Certified Factories</p>
         </div>
         <div className="w-[1px] border border-white border-r-gray-200"></div>
         <div className="flex-1 flex items-center gap-4 justify-center">
           <img src={assets.recycle} className="w-4" />
-          <p>Made From Recycled Materials</p>
+          <p className="text-xs sm:text-sm md:text-base">Made From Recycled Materials</p>
         </div>
       </div>
     </div>

@@ -22,14 +22,13 @@ function Footer() {
           <p className="text-xl font-medium mb-5">Get In Touch</p>
           <ul className="flex flex-col gap-1 text-gray-600">
             <li>+1-555-123-4567</li>
-            <li>info@ecom-store.com</li>
-            <li>123 E-commerce St.</li>
+            <li>info@fitnessfabrics.com</li>
             <li>Suite 100</li>
             <li>New York, NY 10001</li>
           </ul>
         </div>
       </div>
-      <div className="text-xs font-medium text-neutral-500 bg-neutral-200 h-[40px] flex items-center justify-center">&copy; {new Date().getFullYear()} FitnessFabrics. All rights reserved.</div>
+      <div className="text-xs font-medium text-neutral-500 bg-neutral-100 h-[40px] flex items-center justify-center">&copy; {new Date().getFullYear()} FitnessFabrics. All rights reserved.</div>
     </div>
   );
 }

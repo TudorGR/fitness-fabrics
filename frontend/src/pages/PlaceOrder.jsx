@@ -3,7 +3,7 @@ import Title from "../components/Title";
 import CartTotal from "../components/CartTotal";
 import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
 
 const PlaceOrder = () => {
@@ -91,29 +91,29 @@ const PlaceOrder = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt14 min-h-[80vh] mx-10">
+    <form onSubmit={onSubmit} className="flex flex-col sm:flex-row justify-around gap-4 pt-5 sm:pt14 min-h-[70vh] mx-10">
       <div className="flex flex-col gap-4 w-full sm:max-w-[480px]">
         <div className="text-xl sm:text-2xl my-3 w-full">
           <Title text1={"Delivery"} text2={"Information"} />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input required onChange={onChange} name="firstName" value={formData.firstName} type="text" placeholder="First Name" className="border border-gray-300 rounded py-1.5 px-3.5" />
-            <input required onChange={onChange} name="lastName" value={formData.lastName} type="text" placeholder="Last Name" className="border border-gray-300 rounded py-1.5 px-3.5" />
+            <input required onChange={onChange} name="firstName" value={formData.firstName} type="text" placeholder="First Name" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5" />
+            <input required onChange={onChange} name="lastName" value={formData.lastName} type="text" placeholder="Last Name" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5" />
           </div>
-          <input required onChange={onChange} name="email" value={formData.email} type="email" placeholder="Email address" className="border border-gray-300 rounded py-1.5 px-3.5 w-full mt-3" />
-          <input required onChange={onChange} name="street" value={formData.street} type="text" placeholder="Street" className="border border-gray-300 rounded py-1.5 px-3.5 w-full mt-3" />
+          <input required onChange={onChange} name="email" value={formData.email} type="email" placeholder="Email address" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5 w-full mt-3" />
+          <input required onChange={onChange} name="street" value={formData.street} type="text" placeholder="Street" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5 w-full mt-3" />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-            <input required onChange={onChange} name="city" value={formData.city} type="text" placeholder="City" className="border border-gray-300 rounded py-1.5 px-3.5" />
-            <input required onChange={onChange} name="state" value={formData.state} type="text" placeholder="State" className="border border-gray-300 rounded py-1.5 px-3.5" />
+            <input required onChange={onChange} name="city" value={formData.city} type="text" placeholder="City" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5" />
+            <input required onChange={onChange} name="state" value={formData.state} type="text" placeholder="State" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-            <input required onChange={onChange} name="zipcode" value={formData.zipcode} type="number" placeholder="Zip Code" className="border border-gray-300 rounded py-1.5 px-3.5" />
-            <input required onChange={onChange} name="country" value={formData.country} type="text" placeholder="Country" className="border border-gray-300 rounded py-1.5 px-3.5" />
+            <input required onChange={onChange} name="zipcode" value={formData.zipcode} type="number" placeholder="Zip Code" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5" />
+            <input required onChange={onChange} name="country" value={formData.country} type="text" placeholder="Country" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5" />
           </div>
-          <input required onChange={onChange} name="phone" value={formData.phone} type="number" placeholder="Phone number" className="border border-gray-300 rounded py-1.5 px-3.5 w-full mt-3" />
+          <input required onChange={onChange} name="phone" value={formData.phone} type="number" placeholder="Phone number" className="text-base md:text-lg border border-gray-300 rounded py-1.5 px-3.5 w-full mt-3" />
         </div>
       </div>
       <div className="mt-8">
-        <div className="mt-8 min-w-80">
+        <div className="mt-8 min-w-2/3  sm:min-w-80">
           <CartTotal />
         </div>
         <div className="mt-12">
@@ -141,6 +141,7 @@ const PlaceOrder = () => {
             </button>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </form>
   );

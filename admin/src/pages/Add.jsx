@@ -59,19 +59,19 @@ const Add = ({ token }) => {
         <p className="mb-2">Upload Images</p>
         <div className="flex gap-2">
           <label className="cursor-pointer" htmlFor="image1">
-            <img className="w-20" src={image1 === false ? assets.hero_img : URL.createObjectURL(image1)} alt="" />
+            <img className="rounded-sm w-24" src={image1 === false ? assets.imageEmpty : URL.createObjectURL(image1)} alt="" />
             <input onChange={(e) => setImage1(e.target.files[0])} type="file" id="image1" hidden />
           </label>
           <label className="cursor-pointer" htmlFor="image2">
-            <img className="w-20" src={image2 === false ? assets.hero_img : URL.createObjectURL(image2)} alt="" />
+            <img className="rounded-sm w-24" src={image2 === false ? assets.imageEmpty : URL.createObjectURL(image2)} alt="" />
             <input onChange={(e) => setImage2(e.target.files[0])} type="file" id="image2" hidden />
           </label>
           <label className="cursor-pointer" htmlFor="image3">
-            <img className="w-20" src={image3 === false ? assets.hero_img : URL.createObjectURL(image3)} alt="" />
+            <img className="rounded-sm w-24" src={image3 === false ? assets.imageEmpty : URL.createObjectURL(image3)} alt="" />
             <input onChange={(e) => setImage3(e.target.files[0])} type="file" id="image3" hidden />
           </label>
           <label className="cursor-pointer" htmlFor="image4">
-            <img className="w-20" src={image4 === false ? assets.hero_img : URL.createObjectURL(image4)} alt="" />
+            <img className="rounded-sm w-24" src={image4 === false ? assets.imageEmpty : URL.createObjectURL(image4)} alt="" />
             <input onChange={(e) => setImage4(e.target.files[0])} type="file" id="image4" hidden />
           </label>
         </div>
@@ -113,19 +113,19 @@ const Add = ({ token }) => {
         <p className="mb-2">Product Sizes</p>
         <div className="flex gap-3">
           <div onClick={() => setSizes((prev) => (prev.includes("S") ? prev.filter((item) => item !== "S") : [...prev, "S"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("S") ? "bg-blue-800" : ""}`}>S</p>
+            <p className={`rounded-sm bg-slate-100 px-3 py-1 cursor-pointer ${sizes.includes("S") ? "bg-gray-700 text-white" : ""}`}>S</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("M") ? prev.filter((item) => item !== "M") : [...prev, "M"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("M") ? "bg-blue-800" : ""}`}>M</p>
+            <p className={`rounded-sm bg-slate-100 px-3 py-1 cursor-pointer ${sizes.includes("M") ? "bg-gray-700 text-white" : ""}`}>M</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("L") ? prev.filter((item) => item !== "L") : [...prev, "L"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("L") ? "bg-blue-800" : ""}`}>L</p>
+            <p className={`rounded-sm bg-slate-100 px-3 py-1 cursor-pointer ${sizes.includes("L") ? "bg-gray-700 text-white" : ""}`}>L</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("XL") ? prev.filter((item) => item !== "XL") : [...prev, "XL"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("XL") ? "bg-blue-800" : ""}`}>XL</p>
+            <p className={`rounded-sm bg-slate-100 px-3 py-1 cursor-pointer ${sizes.includes("XL") ? "bg-gray-700 text-white" : ""}`}>XL</p>
           </div>
           <div onClick={() => setSizes((prev) => (prev.includes("XXL") ? prev.filter((item) => item !== "XXL") : [...prev, "XXL"]))}>
-            <p className={`bg-slate-200 px-3 py-1 cursor-pointer ${sizes.includes("XXL") ? "bg-blue-800" : ""}`}>XXL</p>
+            <p className={`rounded-sm bg-slate-100 px-3 py-1 cursor-pointer ${sizes.includes("XXL") ? "bg-gray-700 text-white" : ""}`}>XXL</p>
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@ const Add = ({ token }) => {
         </label>
       </div>
 
-      <button type="submit" className="w-28 py-3 mt-4 bg-black text-white">
+      <button type="submit" className="rounded-sm w-28 py-3 mt-4 bg-black text-white">
         ADD
       </button>
     </form>
