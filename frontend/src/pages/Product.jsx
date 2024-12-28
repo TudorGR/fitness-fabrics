@@ -31,13 +31,13 @@ const Product = () => {
     <div className="mx-10 transition-opacity ease-in duration-500 opacity-100">
       <div className="py-4 px-10 font-medium">{`Collection ${productData.category ? "> " + productData.category : ""}`}</div>
       <div className="flex gap-12 sm:gap-12 flex-col sm:flex-row">
-        <div className="w-full flex flex-1 sm:flex-col flex-row gap-4 sm:w-1/2 items-center">
+        <div className="w-full flex flex-1 flex-col gap-4 sm:w-1/2 items-center">
           <div className="max-w-[500px] w-full">
             <img src={image} className="rounded-lg object-cover w-full h-auto" />
           </div>
-          <div className="flex flex-col sm:flex-row overflow-x-auto sm:overflow-y-auto justify-center w-1/3 sm:w-full gap-2">
+          <div className="flex flex-row overflow-x-auto overflow-y-auto justify-center w-full gap-2">
             {productData.image.map((item, index) => (
-              <img onClick={() => setImage(item)} src={item} key={index} className="w-[80px] h-[80px] object-cover rounded-lg cursor-pointer" />
+              <img onClick={() => setImage(item)} src={item} key={index} className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] object-cover rounded-lg cursor-pointer" />
             ))}
           </div>
         </div>
@@ -55,11 +55,11 @@ const Product = () => {
             <p className="pl-2">31 reviews</p>
           </div>
           <div className="my-10 flex gap-4 items-center">
-            <p className=" text-4xl font-medium">
+            <p className="text-3xl sm:text-4xl font-medium">
               {currency}
               {productData.price}.00
             </p>
-            <p className=" text-2xl line-through text-gray-400">
+            <p className="text-xl sm:text-2xl line-through text-gray-400">
               {currency}
               {productData.price + 50}.00
             </p>
@@ -91,7 +91,7 @@ const Product = () => {
           <b className="border border-white border-r-gray-300 px-5 py-3 text-sm">Description</b>
           <p className="px-5 py-3 text-sm">Reviews (31)</p>
         </div>
-        <div className="flex flex-col gap-4 border border-white border-t-gray-300 px-6 py-6 text-sm text-gray-500">
+        <div className="flex flex-col gap-4 border border-white border-t-gray-300 py-6 text-sm text-gray-500">
           <p>Our premium sportswear is designed to provide you with the ultimate comfort and performance. Made from high-quality materials, our products are built to withstand the rigors of any workout, ensuring you stay comfortable and stylish.</p>
           <p>Whether you're hitting the gym, going for a run, or practicing yoga, our sportswear is perfect for any activity. With a focus on quality, comfort, and performance, our products are designed to help you achieve your fitness goals.</p>
         </div>

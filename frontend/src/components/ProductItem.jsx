@@ -18,8 +18,8 @@ const ProductItem = ({ id, image, name, price, sizes }) => {
             ))}
         </div>
       </div>
-      <div className="py-4 flex items-center justify-between">
-        <p className="pb-1 text-sm">{name}</p>
+      <div className="py-4 flex flex-col items-start justify-between">
+        <p className="pb-1 text-xs sm:text-sm">{name}</p>
         <p className="text-sm font-bold">
           {currency}
           {price}

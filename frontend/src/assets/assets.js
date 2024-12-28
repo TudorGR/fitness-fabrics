@@ -40,6 +40,7 @@ import cash from "./cash.png";
 import exchange from "./exchange.png";
 import returnIcon from "./return.png";
 import arrow from "./arrow.png";
+import noOrders from "./noOrders.png";
 
 export const assets = {
   logo,
@@ -64,4 +65,5 @@ export const assets = {
   exchange,
   returnIcon,
   arrow,
+  noOrders,
 };

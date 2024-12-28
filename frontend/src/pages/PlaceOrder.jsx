@@ -119,24 +119,24 @@ const PlaceOrder = () => {
         <div className="mt-12">
           <Title text1={"Payment"} text2={"Method"} />
           <div className="flex gap-3 flex-col lg:flex-row">
-            <div onClick={() => setMethod("google")} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+            <div onClick={() => setMethod("google")} className="rounded-md flex items-center gap-3 border p-2 px-3 cursor-pointer">
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === "google" ? "bg-black" : ""}`}></p>
               <img src={assets.card} className="h-5 mx-4" alt="" />
               <p>Google Pay</p>
             </div>
-            <div onClick={() => setMethod("paypal")} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+            <div onClick={() => setMethod("paypal")} className="rounded-md flex items-center gap-3 border p-2 px-3 cursor-pointer">
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === "paypal" ? "bg-black" : ""}`}></p>
               <img src={assets.card} className="h-5 mx-4" alt="" />
               <p>Paypal</p>
             </div>
-            <div onClick={() => setMethod("cod")} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
+            <div onClick={() => setMethod("cod")} className="rounded-md flex items-center gap-3 border p-2 px-3 cursor-pointer">
               <p className={`min-w-3.5 h-3.5 border rounded-full ${method === "cod" ? "bg-black" : ""}`}></p>
               <img src={assets.cash} className="h-5 mx-4" alt="" />
               <p>Cash</p>
             </div>
           </div>
           <div className="w-full text-end mt-8">
-            <button type="submit" className="bg-black text-white px-16 py-3 text-sm">
+            <button type="submit" className="rounded-md bg-black text-white px-16 py-3 text-sm">
               Place Order
             </button>
           </div>

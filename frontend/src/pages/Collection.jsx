@@ -85,7 +85,7 @@ const Collection = () => {
           Filters
           <img src={assets.arrow} className={`h-3 sm:hidden rotate-90 ${showFilter ? "rotate-[-90]" : ""}`} alt="" />
         </p>
-        <div className="pr-0 p-4 pb-10 border-b-gray-300 border border-white">
+        <div className="pr-0 p-4 pb-10 mb-10 border-b-gray-300 border border-white">
           <label className="block mb-2 text-sm font-medium text-gray-700">Price:</label>
           <div className="flex items-center gap-2">
             <p>min</p>
@@ -143,11 +143,16 @@ const Collection = () => {
       </div>
       <div className="flex-1">
         <div className="flex justify-between text-base sm:text-2xl mb-4 font-medium">
-          <Title text1={"All"} text2={"Collections"} />
-          <select onChange={(e) => setSortType(e.target.value)} className=" text-sm px-2">
-            '<option value="relevant">Sort by relevant</option>
-            <option value="low-high">Sort by low to high</option>
-            <option value="high-low">Sort by high to low</option>
+          <div className="flex items-center gap-2">
+            <p onClick={() => navigate("/collection")} className="text-neutral-700 font-semibold text-sm md:text-base">
+              All Collection
+            </p>
+            <p className="w-8 md:w-11 h-[2px] bg-slate-300"></p>
+          </div>
+          <select onChange={(e) => setSortType(e.target.value)} className=" text-xs sm:text-sm bg-none">
+            <option value="relevant">Relevant</option>
+            <option value="low-high">Low to high</option>
+            <option value="high-low">High to low</option>
           </select>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
