@@ -14,6 +14,11 @@ Fitness Fabrics is an eCommerce website built with the MERN stack (MongoDB, Expr
   - Upload and delete products.
   - View and manage all orders.
   - Access and manage products stored in MongoDB.
+ 
+## Design
+
+### Mobile Design
+![Mobile Design](https://github.com/user-attachments/assets/dcfebbe9-a98d-4964-87ca-5655a399a6a4)
 
 ## Tech Stack
 
