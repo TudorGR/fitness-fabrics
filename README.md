@@ -45,6 +45,28 @@ Fitness Fabrics is an eCommerce website built with the MERN stack (MongoDB, Expr
 - Node.js
 - MongoDB
 
+### Environment Variables
+
+Create the following `.env` files in their respective directories:
+
+#### Backend `.env`
+
+```
+MONGODB_URI="..."
+CLOUDINARY_API="..."
+CLOUDINARY_SECRET_KEY="..."
+CLOUDINARY_NAME="..."
+JWT_SECRET="..."
+ADMIN_EMAIL="..."
+ADMIN_PASSWORD="..."
+```
+
+#### Frontend `.env` / Admin `.env`
+
+```
+VITE_BACKEND_URL="http://localhost:4000"
+```
+
 ### Installation
 
 1. Clone the repository:
