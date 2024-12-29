@@ -18,7 +18,7 @@ Fitness Fabrics is an eCommerce website built with the MERN stack (MongoDB, Expr
 ## Design
 
 ### Mobile Design
-![Mobile Design](https://github.com/user-attachments/assets/fd5b1d60-5317-4c97-8755-9312aba1f6c7)
+![Mobile Design](https://github.com/user-attachments/assets/64572805-f61c-4325-848b-5a22080ca7c4)
 
 ## Tech Stack
 
