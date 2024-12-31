@@ -8,7 +8,11 @@ const ProductItem = ({ id, image, name, price, sizes }) => {
   return (
     <Link className="text-black cursor-pointer" to={`/product/${id}`}>
       <div className="relative rounded-md overflow-hidden group">
-        <img className="max-h-[200px] aspect-square object-cover w-full" src={image[0]} alt="" />
+        <img
+          className="max-h-[200px] aspect-square object-cover w-full"
+          src={image[0]}
+          alt=""
+        />
         <div className="flex justify-start gap-2  w-full absolute right-0 bottom-0 blurry p-2 text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           {Array.isArray(sizes) &&
             sizes.map((item, index) => (

@@ -1,5 +1,7 @@
 import logo from "./image.png";
 import hero_img from "./hero.jpg";
+import hero_img2 from "./hero2.jpg";
+import hero_img3 from "./hero3.jpg";
 import cart_icon from "./cart.png";
 import search_icon from "./searchIcon.png";
 import profile_icon from "./profileIcon.png";
@@ -41,10 +43,13 @@ import exchange from "./exchange.png";
 import returnIcon from "./return.png";
 import arrow from "./arrow.png";
 import noOrders from "./noOrders.png";
+import loadingContent from "./loadingContent.png";
 
 export const assets = {
   logo,
   hero_img,
+  hero_img2,
+  hero_img3,
   cart_icon,
   search_icon,
   profile_icon,
@@ -66,4 +71,5 @@ export const assets = {
   returnIcon,
   arrow,
   noOrders,
+  loadingContent,
 };
