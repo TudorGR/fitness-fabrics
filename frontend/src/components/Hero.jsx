@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="flex flex-col sm:flex-row border border-b-gray-200 border-white">
+      <div className="flex flex-col sm:flex-row border border-b-gray-200 border-white overflow-hidden">
         <div className="w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0">
           <div className="text-neutral-700">
             <div className="flex items-center gap-2">
@@ -42,7 +42,7 @@ const Hero = () => {
             <div className="flex items-center gap-2">
               <p
                 onClick={() => navigate("/collection")}
-                className="font-semibold text-sm md:text-base"
+                className="font-semibold text-sm md:text-base cursor-pointer"
               >
                 Shop Now
               </p>
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="w-full sm:w-1/2">
+        <div className="w-full sm:w-1/2 overflow-hidden">
           <Slider {...settings2}>
             <img
               className="w-full object-cover h-64"
@@ -70,9 +70,9 @@ const Hero = () => {
           </Slider>
         </div>
       </div>
-      <div className="my-4">
+      <div className="my-4 overflow-hidden">
         <Slider {...settings}>
-          <div className="flex flex-1 items-center gap-4 justify-center mx-2">
+          <div className="flex flex-1 items-center gap-4 justify-center">
             <div className="flex justify-center items-center gap-4">
               <img src={assets.checkmark} className="w-4" />
               <p className="text-xs sm:text-sm md:text-base">
@@ -80,7 +80,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="flex-1 flex items-center gap-4 justify-center mx-2">
+          <div className="flex-1 flex items-center gap-4 justify-center">
             <div className="flex justify-center items-center gap-4">
               <img src={assets.recycle} className="w-4" />
               <p className="text-xs sm:text-sm md:text-base">
@@ -88,7 +88,7 @@ const Hero = () => {
               </p>
             </div>
           </div>
-          <div className="flex-1 flex items-center gap-4 justify-center mx-2">
+          <div className="flex-1 flex items-center gap-4 justify-center">
             <div className="flex justify-center items-center gap-4">
               <img src={assets.checkmark} className="w-4" />
               <p className="text-xs sm:text-sm md:text-base">
