@@ -1,6 +1,6 @@
-# Ecommerce website
+# Fitness Fabrics
 
-Fitness Fabrics is an eCommerce website built with the MERN stack (MongoDB, Express JS, React JS, Node JS). This project allows users to explore and purchase fitness products, with functionalities such as product filtering, adding products to the cart, and online ordering. It also includes an admin dashboard for managing products and orders.
+ECommerce website built with the MERN stack (MongoDB, Express JS, React JS, Node JS). This project allows users to explore and purchase fitness products, with functionalities such as product filtering, adding products to the cart, and online ordering. It also includes an admin dashboard for managing products and orders.
 
 ## Features
 
