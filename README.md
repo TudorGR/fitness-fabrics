@@ -17,6 +17,9 @@ ECommerce website built with the MERN stack (MongoDB, Express JS, React JS, Node
  
 ## Design
 
+### Mobile Design
+![Mobile Design](https://github.com/user-attachments/assets/64572805-f61c-4325-848b-5a22080ca7c4)
+
 ## Tech Stack
 
 - **Frontend:**
