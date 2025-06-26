@@ -2,7 +2,6 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen)](https://fitness-fabrics.vercel.app/)
 [![Admin Dashboard](https://img.shields.io/badge/Admin%20Dashboard-Visit%20Panel-blue)](https://fitness-fabrics-admin.vercel.app/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A modern, full-stack **eCommerce platform** specializing in fitness apparel and accessories. Built with the **MERN stack** (MongoDB, Express.js, React.js, Node.js), this application delivers a seamless shopping experience for fitness enthusiasts while providing comprehensive admin tools for business management.
 
