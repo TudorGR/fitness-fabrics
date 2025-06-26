@@ -44,7 +44,7 @@ A modern, full-stack **eCommerce platform** specializing in fitness apparel and 
 
 ### Mobile-First Responsive Design
 
-Our application is built with a mobile-first approach, ensuring optimal user experience across all devices.
+This application is built with a mobile-first approach, ensuring optimal user experience across all devices.
 
 ![Mobile Design](https://github.com/user-attachments/assets/64572805-f61c-4325-848b-5a22080ca7c4)
 
@@ -64,10 +64,6 @@ Experience the application in action:
 | ---------------------- | ----------------------------------------------------------------------------- | ------------------------------------ |
 | 🛒 **Customer Store**  | [fitness-fabrics.vercel.app](https://fitness-fabrics.vercel.app/)             | Browse and purchase fitness products |
 | 🔧 **Admin Dashboard** | [fitness-fabrics-admin.vercel.app](https://fitness-fabrics-admin.vercel.app/) | Manage products and orders           |
-
-### Demo Credentials
-
-For testing the admin dashboard, please contact the repository owner for demo credentials.
 
 ## 🛠️ Tech Stack
 
@@ -344,7 +340,7 @@ VITE_BACKEND_URL="https://your-backend-domain.vercel.app"
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+I welcome contributions! Here's how you can help:
 
 ### Development Workflow
 
@@ -399,4 +395,3 @@ lsof -ti:5173 | xargs kill -9
 
 - **Issues**: [GitHub Issues](https://github.com/TudorGR/fitness-fabrics/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/TudorGR/fitness-fabrics/discussions)
-- **Email**: Contact repository owner
