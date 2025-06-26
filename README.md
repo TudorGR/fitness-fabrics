@@ -17,7 +17,6 @@ A modern, full-stack **eCommerce platform** specializing in fitness apparel and 
 - [🔧 Configuration](#-configuration)
 - [📝 API Documentation](#-api-documentation)
 - [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
 
 ## 🎯 Features
 
